@@ -21,18 +21,24 @@ Or install it yourself as:
 ## Usage
 
 ### clinet initialize
-```
+```ruby
 client = Obniz::Client.new(obniz_id: 'xxxx-xxxx')
 ```
 or
-```
+```ruby
 client = Obniz::Client.new(obniz_id: 'xxxx-xxxx', access_token: 'xxxxxxxx')
 ```
 
 ### call api
-ex)
-```
+#### display
+```ruby
 client.post([{ display: { clear: true, text: 'hello world' } }])
+```
+
+#### LED
+io0 is connected to anode, io1 is cathode
+```ruby
+client.post([{ io0: true, io1: false } ])
 ```
 
 ## Contributing
